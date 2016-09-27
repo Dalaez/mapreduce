@@ -1,5 +1,3 @@
-import sys
-
 __author__ = 'masp'
 
 from dumbo import main, MultiMapper, primary, secondary, JoinReducer
@@ -22,7 +20,7 @@ def parse_athletes_medals_map(key, value):
     """
     try:
         athlete, age, country, year, ceremony, sport, gold, silver, bronze, total = value.split('|')
-        yield (country, int(year)), ( gold, silver, bronze, total)
+        yield (country, int(year)), (gold, silver, bronze, total)
     except:
         pass
 
@@ -70,4 +68,3 @@ def runner(job):
 
 if __name__ == "__main__":
     main(runner)
-
