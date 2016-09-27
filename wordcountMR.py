@@ -1,4 +1,3 @@
-"""Wordcount of a text file using MapReduce"""
 import sys
 
 

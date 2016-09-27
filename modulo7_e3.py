@@ -1,5 +1,3 @@
-__author__ = 'masp'
-
 import csv
 
 from dumbo import main

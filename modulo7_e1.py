@@ -1,5 +1,3 @@
-__author__ = 'masp'
-
 from dumbo import main, MultiMapper, primary, secondary, JoinReducer
 
 
@@ -49,8 +47,8 @@ class Join_athlete_country_medals_reduce(JoinReducer):
             if bronze > 0 and (key[1], 'Bronze') in self.country_cache:
                 total_price += int(self.country_cache[(key[1], 'Bronze')]) * int(bronze)
 
-        #emit values
-        yield key, ( total, total_price)
+        # Emit values
+        yield key, (total, total_price)
 
     def secondary_blocked(self, b):
         if self._key != b:
