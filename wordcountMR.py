@@ -4,7 +4,6 @@ import sys
 def wordcountMapper(k, value):
     """Input: key: offset, value: content
        Output: key: word, value: 1"""
-    print >> sys.stderr, 'VERSION: ' + str(sys.version)
     wordslist = value.split(" ")
     for word in wordslist:
         yield word, 1
