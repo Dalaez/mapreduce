@@ -4,5 +4,5 @@ dumbo start modulo7_e2.py \
   -python /usr/bin/python \
   -input /user/alumno/test/in/OlympicAthletes.txt \
   -output /user/alumno/test/out/ \
-  -file ./CountryMedals.txt \
+  -file ./data/CountryMedals.txt \
   -overwrite yes 
