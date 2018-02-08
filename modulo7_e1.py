@@ -36,8 +36,8 @@ class Join_athlete_country_medals_reduce(JoinReducer):
         total_price = 0
         total = 0
         for v in values:
-            gold, silver, bronze, t = v[:]
-            total += t
+            gold, silver, bronze, medals = v[:]
+            total += int(medals)
 
             if gold > 0 and (key[1], 'Gold') in self.country_cache:
                 total_price += int(self.country_cache[(key[1], 'Gold')]) * int(gold)
